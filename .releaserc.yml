@@ -15,7 +15,7 @@ plugins:
       assets:
         - path: "**/*"
           label: "Theme files"    
-preset: "conventionalcommits"
+preset: "angular"
 ci: false
 dryRun: false
 debug: true
