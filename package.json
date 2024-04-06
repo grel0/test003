@@ -1,0 +1,21 @@
+{
+    "name": "test003",
+    "description": "The test number 003.",
+    "version": "0.0.0",
+    "author": "grel0",
+    "dependencies": {},
+    "devDependencies": {
+      "@semantic-release/changelog": "^6.0.3",
+      "@semantic-release/commit-analyzer": "^12.0.0",
+      "@semantic-release/git": "^10.0.1",
+      "@semantic-release/github": "^10.0.2",
+      "@semantic-release/release-notes-generator": "^13.0.0",
+      "semantic-release": "^23.0.6"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/grel0/test003.git"
+    },
+    "license": "MIT"
+  }
+  
