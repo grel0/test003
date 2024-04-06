@@ -16,6 +16,4 @@ plugins:
         - path: "**/*"
           label: "Theme files"    
 preset: "angular"
-ci: false
-dryRun: false
 debug: true

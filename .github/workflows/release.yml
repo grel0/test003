@@ -5,7 +5,8 @@ on:
     branches:
       - main
       - pre-release
-
+permissions:
+  contents: read
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -15,17 +16,18 @@ jobs:
         pull-requests: write
         id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8
         with:
+          cache: npm
           node-version: lts/*
 
-      - run: npm ci
+      - run: npm clean-install
 
-      - run: npx semantic-release
+      - run: npx semantic-release@21.0.2
         env:
           GH_TOKEN: ${{ secrets.MY_PAT }}
           DEBUG: "semantic-release:*,semantic-release:github"
